@@ -23,6 +23,8 @@ body {
   vertical-align: middle;
 }
 
-
-
+.offset {
+  position: relative;
+  top: -50px;
+}
 
