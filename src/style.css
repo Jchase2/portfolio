@@ -1,7 +1,28 @@
 body {
   padding-top: 50px;
+  background-color: #D4D7FE;
 }
-.template {
-  padding: 40px 15px;
-  text-align: center;
+.fullpage {
+  color: #FFF;
+  background-color: #16171a;
+  height: 100vh;
+  font-size: large;
 }
+
+.fullpage p {
+  color: #ff9900
+}
+
+.gray-bg {
+  background-color: #16171a; 
+}
+
+.footer {
+  height: 8vh; 
+  color: #FFF;
+  vertical-align: middle;
+}
+
+
+
+

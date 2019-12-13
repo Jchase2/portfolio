@@ -7,39 +7,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Portfolio Site" content="">
     <meta name="James Chsae II" content="">
-    <title>Bootstrap Version of My Portfolio.</title>
+    <title>James Chsae II's Site</title>
 </head>
 <header>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar fixed-top navbar-dark bg-dark">
         <a class="navbar-brand" href="#">JChase2</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/Jchase2" target="_blank">Github</a>
-                </li>
-            </ul>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="./">Home</a>
+            <a class="dropdown-item" href="#projects">Projects</a>
+            <a class="dropdown-item" href="https://github.com/Jchase2" target="_blank">Github</a>
+            <a class="dropdown-item" href="#credentials">Creentials</a>
+            <a class="dropdown-item" href="./" target="_blank">Nextcloud</a>
+            <a class="dropdown-item" href="./" target="_blank">Plex</a>
         </div>
     </nav>
-    </div>
 </header>
 
 <body>
-    <div class="container">
-        <div class="template">
-            <h1>James Chase II</h1>
-            <p>Web Development, Music, Writing.</p>
+    <div class="fullpage container-fluid">
+        <div class="row h-75 justify-content-center align-items-center text-center">
+            <div class="col">
+                <h1>James Chase II</h1>
+                <p> Programmer / Web Developer && Personal Site </p>
+            </div>
+        </div>
+        <div class="text-center">
+            <a href="#projects" role="button" class="btn btn-primary btn-lg">Projects <i
+                    class="fa fa-arrow-alt-circle-down"></i></a>
+            <a href="#credentials" role="button" class="btn btn-primary btn-lg">Credentials <i
+                    class="fa fa-arrow-alt-circle-down"></i></a>
+            <a href="./resume.pdf" role="button" class="btn btn-primary btn-lg">Resume <i
+                    class="far fa-file-alt"></i></a>
+        </div>
+    </div>
+    <div class="container-fluid mt-3 mb-3" id="projects">
+        <div class="row text-center">
+            <div class="col-12 mb-3">
+                <h2>Projects</h2>
+            </div>
+            <div class="col-md-6 mb-2 mt-2">
+                <div class="card bg-dark text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Hacker News Clone</h5>
+                        <p class="card-text">HN clone using react, react-router, <a
+                                href="https://react.semantic-ui.com/" target="_blank"> react semantic-ui</a>
+                            and <a href="https://github.com/HackerNews/API" target="_blank">the HN firebase API.</a></p>
+                        <a href="https://github.com/Jchase2/hn-clone" target="_blank" class="btn btn-info">Github</a>
+                        <a href="https://5df39389dbcc44707f766644--admiring-shirley-f2e656.netlify.com/"
+                            class="btn btn-info" target="_blank">Live Site</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-2 mt-2">
+                <div class="card bg-dark text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Simple Pass Manager</h5>
+                        <p class="card-text">A simple password manager written in bash for unix-like systems. Uses GPG
+                            and shell tools.</p>
+                        <a href="https://github.com/Jchase2/simple-pass-manager" target="_blank"
+                            class="btn btn-info">Github</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-2 mt-2">
+                <div class="card bg-dark text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Ocaml Pass</h5>
+                        <p class="card-text">Similar to simple pass manager, except written in Ocaml.</p>
+                        <a href="https://github.com/Jchase2/ocaml-pass" target="_blank" class="btn btn-info">Github</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-2 mt-2">
+                <div class="card bg-dark text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Server</h5>
+                        <p class="card-text">About my personal server / the stack this site (and my projects) are
+                            running on.</p>
+                        <a href="./server" class="btn btn-info">Server Info</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center mt-3" id="credentials">
+            <div class="col-12 mb-3">
+                <h2>Education and Certificates</h2>
+            </div>
+            <div class="col-6">
+                <div class="card bg-dark text-white">
+                    <div class="card-header">
+                        B.S. Computer Science, West Chester University
+                    </div>
+                    <div class="card-body">
+                        <a href="#" class="btn float-left" data-toggle="modal" data-target="#wcumodal">
+                            <img src="degree.jpg" class="img-thumbnail" width="200px" height="150px"
+                                alt="WCU B.S Degree" id="wcupa" />
+                        </a>
+                        <p>West Chester University bachelors degree in Computer Science</p>
+                        <p>ISC <a href="https://www.wcupa.edu/sciences-mathematics/computerScience/securityCertificate.aspx">Computer Security Certificate</a> awarded alongside this.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="wcumodal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="degree.jpg" width="100%" height="100%" alt="WCU B.S Degree" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
     </div>
 </body>
+<footer class="footer bg-dark mt-5">
+</footer>
 
 </html>

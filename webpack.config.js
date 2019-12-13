@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -16,12 +17,6 @@ module.exports = {
                 use: [
                     'style-loader',
                     'css-loader',
-                ],
-            },
-            {
-                test: /\.(png|svg|jpg|gif)$/,
-                use: [
-                    'file-loader',
                 ],
             },
         ]
@@ -42,5 +37,8 @@ module.exports = {
             template: './src/index.html',
             filename: 'index.html',
         }),
+        new CopyWebpackPlugin([
+            { from: './src/Assets' }
+        ]),
     ],
 };
