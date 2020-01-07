@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 module.exports = {
     entry: './src/index.js',
@@ -36,9 +37,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/index.html',
             filename: 'index.html',
+            hash: true,
         }),
         new CopyWebpackPlugin([
             { from: './src/Assets' }
         ]),
+        new ImageminPlugin()
     ],
 };
