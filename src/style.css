@@ -28,6 +28,9 @@ body {
   top: -50px;
 }
 
-.modal-lg-jc {
-  max-width: 65%;
+@media (min-width: 768px) {
+  .modal-xl {
+    width: 65%;
+   max-width:1200px;
+  }
 }
