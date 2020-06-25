@@ -3,8 +3,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
+    mode: 'production',
     entry: './src/index.js',
     module: {
         rules: [
@@ -15,10 +17,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: [
-                    'style-loader',
-                    'css-loader',
-                ],
+                use: [MiniCssExtractPlugin.loader, 'css-loader'],
             },
             {
                 test: /\.(png|jpg|gif)$/i,
@@ -40,9 +39,9 @@ module.exports = {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
     },
-    devServer: {
-        contentBase: './dist',
-    },
+    //devServer: {
+    //    contentBase: './dist',
+    //},
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
@@ -53,6 +52,7 @@ module.exports = {
         new CopyWebpackPlugin([
             { from: './src/Assets' }
         ]),
-        new ImageminPlugin()
+        new ImageminPlugin(),
+        new MiniCssExtractPlugin()
     ],
 };
