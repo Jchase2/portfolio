@@ -49,9 +49,11 @@ module.exports = {
             filename: 'index.html',
             hash: true,
         }),
-        new CopyWebpackPlugin([
-            { from: './src/Assets' }
-        ]),
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: './src/Assets' }
+            ],
+        }),
         new ImageminPlugin(),
         new MiniCssExtractPlugin()
     ],
